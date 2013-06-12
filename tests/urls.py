@@ -3,7 +3,7 @@
 :license: Apache License 2.0, see LICENSE for more details.
 """
 
-from django.conf.urls.defaults import *
+from django.conf.urls import *
 
 
 def foo(request):
