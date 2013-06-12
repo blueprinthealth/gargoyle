@@ -10,8 +10,22 @@ from django import template
 
 from gargoyle import gargoyle
 
+from django.conf import settings
+import json
+
 register = template.Library()
 
+@register.tag
+def flags(parser, token):
+    return GargoyleJSONNode()
+
+class GargoyleJSONNode(template.Node):
+    def render(self, context):
+        default_flags_dict = getattr(settings, 'GARGOYLE_SWITCH_DEFAULTS', {})
+        flag_values = {}
+        for flag_key in default_flags_dict:
+            flag_values[flag_key] = gargoyle.is_active(flag_key)
+        return json.dumps(flag_values)
 
 @register.tag
 def ifswitch(parser, token):
