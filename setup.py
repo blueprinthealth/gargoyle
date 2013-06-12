@@ -8,16 +8,16 @@ except:
     pass
 
 tests_require = [
-    'Django>=1.2,<1.6',
+    'Django',
     'django-nose',
     'nose',
     'South',
 ]
 
 install_requires = [
-    'django-modeldict>=1.2.0',
-    'nexus>=0.2.3',
-    'django-jsonfield>=0.8.0,<0.9.4',
+    'django-modeldict',
+    'nexus',
+    'jsonfield',
 ]
 
 
