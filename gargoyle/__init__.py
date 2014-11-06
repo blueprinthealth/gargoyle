@@ -40,3 +40,6 @@ def autodiscover():
 
     # load builtins
     __import__('gargoyle.builtins')
+
+
+default_app_config = 'gargoyle.apps.GargoyleAppConfig'
