@@ -15,18 +15,18 @@ tests_require = [
 ]
 
 install_requires = [
-    'django-modeldict',
-    'nexus',
+    'django-modeldict>=1.2.0',
+    'nexus>=0.2.3',
     'jsonfield>=0.9.15',
 ]
 
 
 setup(
     name='gargoyle',
-    version='0.10.9',
+    version='0.11.0',
     author='DISQUS',
     author_email='opensource@disqus.com',
-    url='http://github.com/disqus/gargoyle',
+    url='https://github.com/disqus/gargoyle',
     description='Gargoyle is a platform built on top of Django which allows you to switch functionality of your application on and off based on conditions.',
     packages=find_packages(exclude=["example_project", "tests"]),
     zip_safe=False,
